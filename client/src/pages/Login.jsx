@@ -41,7 +41,7 @@ export default function Login() {
     <div className="min-h-[70vh] flex items-center justify-center">
       <div className="card w-full max-w-sm">
         <div className="text-center mb-6">
-          <h1 className="text-2xl font-bold text-[#1e3a5f]">Sangha Tracker</h1>
+          <h1 className="text-2xl font-bold text-[#1e3a5f]">CollectionTracker</h1>
           <p className="text-gray-500 mt-1 text-sm">Admin Login</p>
         </div>
 

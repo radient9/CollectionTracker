@@ -20,7 +20,7 @@ const MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Se
 // GET /api/export/excel
 router.get('/excel', authenticateAdmin, async (req, res) => {
   const workbook = new ExcelJS.Workbook();
-  workbook.creator = 'Sangha Tracker';
+  workbook.creator = 'CollectionTracker';
   workbook.created = new Date();
 
   const members = db.prepare(
@@ -97,7 +97,7 @@ router.get('/excel', authenticateAdmin, async (req, res) => {
   const totalRow = expensesSheet.addRow(['', '', 'Total', expenseTotal]);
   totalRow.font = { bold: true };
 
-  const filename = `sangha-tracker-${formatDate()}.xlsx`;
+  const filename = `collection-tracker-${formatDate()}.xlsx`;
   res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
   res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
   await workbook.xlsx.write(res);
@@ -116,7 +116,7 @@ router.get('/pdf', authenticateAdmin, (req, res) => {
 
   const doc = new PDFDocument({ margin: 50, size: 'A4' });
 
-  const filename = `sangha-tracker-${formatDate()}.pdf`;
+  const filename = `collection-tracker-${formatDate()}.pdf`;
   res.setHeader('Content-Type', 'application/pdf');
   res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
   doc.pipe(res);
