@@ -17,5 +17,5 @@ app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Sangha Tracker server running on port ${PORT}`);
+  console.log(`CollectionTracker server running on port ${PORT}`);
 });

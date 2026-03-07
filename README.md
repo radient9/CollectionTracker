@@ -1,4 +1,4 @@
-# Sangha Tracker
+# CollectionTracker
 
 A full-stack web application for managing member collections and group expenses for **Biruver Kanthavara Billava Sangha**.
 

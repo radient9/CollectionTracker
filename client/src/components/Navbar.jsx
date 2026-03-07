@@ -28,7 +28,7 @@ export default function Navbar() {
       a.href = url;
       const ext = type === 'excel' ? 'xlsx' : 'pdf';
       const date = new Date().toISOString().split('T')[0];
-      a.download = `sangha-tracker-${date}.${ext}`;
+      a.download = `collection-tracker-${date}.${ext}`;
       a.click();
       window.URL.revokeObjectURL(url);
     } catch (err) {
@@ -51,7 +51,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="text-white text-xl font-bold tracking-wide">
-              Sangha Tracker
+              CollectionTracker
             </Link>
           </div>
 
