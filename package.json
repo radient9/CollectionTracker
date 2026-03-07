@@ -1,0 +1,13 @@
+{
+  "name": "sangha-tracker",
+  "version": "1.0.0",
+  "description": "Sangha Tracker - Member collections and group expenses manager",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "seed": "node server/db/seed.js",
+    "build": "npm run build --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

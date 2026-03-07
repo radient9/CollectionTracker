@@ -1,0 +1,7 @@
+node_modules/
+server/db/sangha.db
+server/db/sangha.db-shm
+server/db/sangha.db-wal
+dist/
+.env
+*.log
